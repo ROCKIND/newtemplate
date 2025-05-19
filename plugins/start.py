@@ -53,7 +53,7 @@ PLAN_TXT = """<blockquote>𝖯𝗅𝖺𝗇 𝖣𝖾𝗍𝖺𝗂𝗅𝗌</blockqu
 keyboard = ReplyKeyboardMarkup(
     [
         [
-            KeyboardButton("Get"),
+            KeyboardButton("Videos"),
             KeyboardButton("Brazzers")
         ],
         [
