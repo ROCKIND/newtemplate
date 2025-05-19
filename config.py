@@ -23,7 +23,7 @@ REQUEST_TO_JOIN_MODE = bool(environ.get("REQUEST_TO_JOIN_MODE", True))
 FORWARD = bool(environ.get("FORWARD", False))
 
 # Force subscribe channel 
-auth_channel = environ.get('AUTH_CHANNEL', '') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '-1002600199074') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 second_auth_channel = environ.get('SECOND_AUTH_CHANNEL', '') # give your force subscribe channel id here else leave it blank
