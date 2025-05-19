@@ -3,19 +3,19 @@ from os import environ
 
 id_pattern = re.compile(r'^.\d+$')
 
-API_ID = int(environ.get("API_ID", ""))
-API_HASH = environ.get("API_HASH", "")
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+API_ID = int(environ.get("API_ID", "23621595"))
+API_HASH = environ.get("API_HASH", "de904be2b4cd4efe2ea728ded17ca77d")
+BOT_TOKEN = environ.get("BOT_TOKEN", "7355277731:AAENoMRTMYMd4ja8OrVv5VrZWR2l_Oe8p4s")
 
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002648688388"))
 
 # Database Channel For Text Or Caption Store 
-FILE_CHANNEL = int(environ.get("FILE_CHANNEL", ""))
+FILE_CHANNEL = int(environ.get("FILE_CHANNEL", "-1002600199074"))
 
-ADMINS = int(environ.get("ADMINS", ""))
+ADMINS = int(environ.get("ADMINS", "1249672673"))
 
 # Mongodb Database 
-DB_URI = environ.get("DB_URI", "")
+DB_URI = environ.get("DB_URI", "mongodb+srv://dbmongo702:xtb9PzLmv5dstZYG@cluster0.2dxbh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DB_NAME = environ.get("DB_NAME", "chatvjbot")
 
 # True Or False
