@@ -146,7 +146,7 @@ async def start(client, message):
                 return await message.reply_text("something wrong with force subscribe.")
 
         if len(message.command) != 2 or message.command[1] == "ok":
-            return await message.reply_text(text=f"**Hello {message.from_user.mention} 👋,\n\nI am powerfull adult bot with advance festures.**", reply_markup=keyboard)
+            return await message.reply_text(text=f"**Hello {message.from_user.mention} 👋,\n\nI am powerfull adult bot with advance festures Get click here.**", reply_markup=keyboard)
   
 @Client.on_message(filters.private & filters.text & ~filters.command("start"))
 async def handle_message(client, message):
