@@ -7,7 +7,7 @@ API_ID = int(environ.get("API_ID", "23621595"))
 API_HASH = environ.get("API_HASH", "de904be2b4cd4efe2ea728ded17ca77d")
 BOT_TOKEN = environ.get("BOT_TOKEN", "7355277731:AAENoMRTMYMd4ja8OrVv5VrZWR2l_Oe8p4s")
 
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1001860172104"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", -1002648688388"))
 
 # Database Channel For Text Or Caption Store 
 FILE_CHANNEL = int(environ.get("FILE_CHANNEL", "-1002330570224"))
@@ -23,7 +23,7 @@ REQUEST_TO_JOIN_MODE = bool(environ.get("REQUEST_TO_JOIN_MODE", True))
 FORWARD = bool(environ.get("FORWARD", False))
 
 # Force subscribe channel 
-auth_channel = environ.get('AUTH_CHANNEL', '-1002600199074') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '-1002648688388') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 second_auth_channel = environ.get('SECOND_AUTH_CHANNEL', '-1002327494077') # give your force subscribe channel id here else leave it blank
