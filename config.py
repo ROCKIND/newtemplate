@@ -15,8 +15,8 @@ FILE_CHANNEL = int(environ.get("FILE_CHANNEL", "-1002330570224"))
 ADMINS = int(environ.get("ADMINS", "1249672673"))
 
 # Mongodb Database 
-DB_URI = environ.get("DB_URI", "mongodb+srv://dbmongo702:xtb9PzLmv5dstZYG@cluster0.2dxbh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DB_NAME = environ.get("DB_NAME", "chatbotvj")
+DB_URI = environ.get("DB_URI", "mongodb+srv://HiiFyi665555:HiiFyi665555@cluster009888999.i9yulb8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster009888999")
+DB_NAME = environ.get("DB_NAME", "chatvjbot")
 
 # True Or False
 REQUEST_TO_JOIN_MODE = bool(environ.get("REQUEST_TO_JOIN_MODE", True))
