@@ -16,7 +16,7 @@ ADMINS = int(environ.get("ADMINS", "1249672673"))
 
 # Mongodb Database 
 DB_URI = environ.get("DB_URI", ".")
-DB_NAME = environ.get("DB_NAME", "Cluster0")
+DB_NAME = environ.get("DB_NAME", "chatvjbot")
 
 # True Or False
 REQUEST_TO_JOIN_MODE = bool(environ.get("REQUEST_TO_JOIN_MODE", True))
