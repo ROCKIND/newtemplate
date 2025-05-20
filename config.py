@@ -15,7 +15,7 @@ FILE_CHANNEL = int(environ.get("FILE_CHANNEL", "-1002335899227"))
 ADMINS = int(environ.get("ADMINS", "1249672673"))
 
 # Mongodb Database 
-DB_URI = environ.get("DB_URI", ".")
+DB_URI = environ.get("DB_URI", "mongodb+srv://Botmaster:Botmaster@cluster08283746473883.mfjsvds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster08283746473883")
 DB_NAME = environ.get("DB_NAME", "chatvjbot")
 
 # True Or False
