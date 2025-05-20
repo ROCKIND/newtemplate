@@ -15,7 +15,7 @@ FILE_CHANNEL = int(environ.get("FILE_CHANNEL", "-1002335899227"))
 ADMINS = int(environ.get("ADMINS", "1249672673"))
 
 # Mongodb Database 
-DB_URI = environ.get("DB_URI", "mongodb+srv://HiiFyi665555:HiiFyi665555@cluster009888999.i9yulb8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster009888999")
+DB_URI = environ.get("DB_URI", ".")
 DB_NAME = environ.get("DB_NAME", "Cluster0")
 
 # True Or False
