@@ -10,7 +10,7 @@ BOT_TOKEN = environ.get("BOT_TOKEN", "7355277731:AAENoMRTMYMd4ja8OrVv5VrZWR2l_Oe
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", -1002648688388"))
 
 # Database Channel For Text Or Caption Store 
-FILE_CHANNEL = int(environ.get("FILE_CHANNEL", "-1002330570224"))
+FILE_CHANNEL = int(environ.get("FILE_CHANNEL", "-1002335899227"))
 
 ADMINS = int(environ.get("ADMINS", "1249672673"))
 
