@@ -215,7 +215,7 @@ async def handle_message(client, message):
 
     if message.text == "Brazzers":
         buttons = [[
-            InlineKeyboardButton('Buy Subscription', url='http://t.me/SouravSearch_bot')
+            InlineKeyboardButton('Buy Subscription', url='http://t.me/premiumuseronly_Bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(text=BRA_TXT,
@@ -245,7 +245,7 @@ async def handle_message(client, message):
 
     if message.text == "Subscription":
         buttons = [[
-            InlineKeyboardButton('Owner', url='http://t.me/SouravSearch_bot')
+            InlineKeyboardButton('Owner', url='http://t.me/premiumuseronly_Bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(text=SUBS_TXT,
