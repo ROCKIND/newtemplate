@@ -5,7 +5,7 @@ id_pattern = re.compile(r'^.\d+$')
 
 API_ID = int(environ.get("API_ID", "23621595"))
 API_HASH = environ.get("API_HASH", "de904be2b4cd4efe2ea728ded17ca77d")
-BOT_TOKEN = environ.get("BOT_TOKEN", "7355277731:AAENoMRTMYMd4ja8OrVv5VrZWR2l_Oe8p4s")
+BOT_TOKEN = environ.get("BOT_TOKEN", "")
 
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", -1002648688388"))
 
