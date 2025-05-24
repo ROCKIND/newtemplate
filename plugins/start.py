@@ -55,7 +55,7 @@ PLAN_TXT = """<blockquote>𝖯𝗅𝖺𝗇 𝖣𝖾𝗍𝖺𝗂𝗅𝗌</blockqu
 keyboard = ReplyKeyboardMarkup(
     [
         [
-            KeyboardButton("Get Videos"),
+            KeyboardButton("Get"),
             KeyboardButton("Brazzers")
         ],
         [
@@ -154,7 +154,7 @@ async def start(client, message):
 async def handle_message(client, message):
     user_id = message.from_user.id
     me = await client.get_me()
-    if message.text == "Get Videos":
+    if message.text == "Get:
         if not await db.has_premium_access(user_id):
             plan = await db.get_plan(user_id)
             if plan == False:
