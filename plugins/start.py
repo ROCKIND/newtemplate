@@ -209,13 +209,13 @@ async def handle_message(client, message):
                     await asyncio.sleep(600)
                     await k.delete()
                 else:
-                    return await message.reply("Your Daily Quota Exceeded Of 30 Files Per Day. Come Back Tomorrow. Thanks For Your Support.")
+                    return await message.reply("Your Daily Quota Exceeded Of 40 Files Per Day. Come Back Tomorrow. Thanks For Your Support.")
        
             
 
     if message.text == "Brazzers":
         buttons = [[
-            InlineKeyboardButton('Buy Subscription', url='http://t.me/SouravSearch_bot')
+            InlineKeyboardButton('Buy Subscription', url='http://t.me/premiumuseronly_Bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(text=BRA_TXT,
@@ -245,7 +245,7 @@ async def handle_message(client, message):
 
     if message.text == "Subscription":
         buttons = [[
-            InlineKeyboardButton('Owner', url='http://t.me/SouravSearch_bot')
+            InlineKeyboardButton('Owner', url='http://t.me/premiumuseronly_Bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(text=SUBS_TXT,
