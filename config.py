@@ -26,5 +26,5 @@ FORWARD = bool(environ.get("FORWARD", False))
 auth_channel = environ.get('AUTH_CHANNEL', '-1002648688388') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
-second_auth_channel = environ.get('SECOND_AUTH_CHANNEL', '-1002327494077') # give your force subscribe channel id here else leave it blank
+second_auth_channel = environ.get('SECOND_AUTH_CHANNEL', '-1002648688388') # give your force subscribe channel id here else leave it blank
 SECOND_AUTH_CHANNEL = int(second_auth_channel) if second_auth_channel and id_pattern.search(second_auth_channel) else None
