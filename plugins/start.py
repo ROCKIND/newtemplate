@@ -209,13 +209,13 @@ async def handle_message(client, message):
                     await asyncio.sleep(600)
                     await k.delete()
                 else:
-                    return await message.reply("Your Daily Quota Exceeded Of 30 Files Per Day. Come Back Tomorrow. Thanks For Your Support.")
+                    return await message.reply("Your Daily Quota Exceeded Of 40 Files Per Day. Come Back Tomorrow. Thanks For Your Support.")
        
             
 
     if message.text == "Brazzers":
         buttons = [[
-            InlineKeyboardButton('Buy Subscription', url='http://t.me/VJ_Botz')
+            InlineKeyboardButton('Buy Subscription', url='http://t.me/BotMaster55')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(text=BRA_TXT,
@@ -232,12 +232,12 @@ async def handle_message(client, message):
                 remaining = daily - used
             else:
                 p = "Paid"
-                daily = int(30)
+                daily = int(40)
                 used = await db.get_pre_used(user_id)
                 remaining = daily - used
         else:
             p = "Paid"
-            daily = int(30)
+            daily = int(40)
             used = await db.get_pre_used(user_id)
             remaining = daily - used
         await message.reply_text(text=PLAN_TXT.format(message.from_user.mention, message.from_user.id, p, daily, used, daily, remaining),
@@ -245,7 +245,7 @@ async def handle_message(client, message):
 
     if message.text == "Subscription":
         buttons = [[
-            InlineKeyboardButton('Owner', url='http://t.me/VJ_Botz')
+            InlineKeyboardButton('Owner', url='http://t.me/BotMaster55')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(text=SUBS_TXT,
