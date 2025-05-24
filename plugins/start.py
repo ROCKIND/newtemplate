@@ -25,12 +25,12 @@ BRA_TXT = """𝖡𝗎𝗒 𝖲𝗎𝖻𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇 𝖠�
 SUBS_TXT = """𝖯𝗎𝗋𝖼𝗁𝖺𝗌𝖾 𝖮𝗎𝗋 𝖲𝗎𝖻𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇 𝖳𝗈 𝖡𝗈𝗈𝗌𝗍 𝖸𝗈𝗎 𝖣𝖺𝗂𝗅𝗒 𝖫𝗂𝗆𝗂𝗍𝗌.
 
 <blockquote>𝖥𝗋𝖾𝖾 𝖴𝗌𝖾𝗋 𝖡𝖾𝗇𝖾𝖿𝗂𝗍𝗌</blockquote>
-» 𝖦𝖾𝗍 𝖣𝖺𝗂𝗅𝗒 5 𝖥𝗂𝗅𝖾𝗌 𝖣𝖺𝗂𝗅𝗒
+» 𝖦𝖾𝗍 𝖣𝖺𝗂𝗅𝗒 10 𝖥𝗂𝗅𝖾𝗌 𝖣𝖺𝗂𝗅𝗒
 » 𝖬𝖺𝗑𝗂𝗆𝗎𝗆 𝖵𝗂𝖽𝖾𝗈 𝖫𝖾𝗇𝗀𝗍𝗁 5 𝖬𝗂𝗇𝗎𝗍𝖾𝗌 
 » 𝖭𝗈 𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝖢𝗈𝗇𝗍𝖾𝗇𝗍
 
 <blockquote>𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝖴𝗌𝖾𝗋 𝖡𝖾𝗇𝖾𝖿𝗂𝗍𝗌</blockquote>
-» 𝖦𝖾𝗍 𝖣𝖺𝗂𝗅𝗒 40 𝖥𝗂𝗅𝖾𝗌 𝖣𝖺𝗂𝗅𝗒 
+» 𝖦𝖾𝗍 𝖣𝖺𝗂𝗅𝗒 60 𝖥𝗂𝗅𝖾𝗌 𝖣𝖺𝗂𝗅𝗒 
 » 𝖬𝖺𝗑𝗂𝗆𝗎𝗆 𝖵𝗂𝖽𝖾𝗈 𝖫𝖾𝗇𝗀𝗍𝗁 𝖴𝗇𝗅𝗂𝗆𝗂𝗍𝖾𝖽
 » 𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝖢𝗈𝗇𝗍𝖾𝗇𝗍    
   
@@ -182,7 +182,7 @@ async def handle_message(client, message):
                         await asyncio.sleep(600)
                         await k.delete()
                     else:
-                        return await message.reply("Your Daily Quota Exceeded Of 6 Files Per Day. Come Back Tomorrow Or Buy Subscription To Get Unlimited Benefits.")
+                        return await message.reply("Your Daily Quota Exceeded Of 10 Files Per Day. Come Back Tomorrow Or Buy Subscription To Get Unlimited Benefits.")
         else:
             today_date_str = datetime.now().strftime('%Y-%m-%d')
             date = await db.get_date(user_id)
@@ -209,7 +209,7 @@ async def handle_message(client, message):
                     await asyncio.sleep(600)
                     await k.delete()
                 else:
-                    return await message.reply("Your Daily Quota Exceeded Of 40 Files Per Day. Come Back Tomorrow. Thanks For Your Support.")
+                    return await message.reply("Your Daily Quota Exceeded Of 60 Files Per Day. Come Back Tomorrow. Thanks For Your Support.")
        
             
 
@@ -227,17 +227,17 @@ async def handle_message(client, message):
             plan = await db.get_plan(user_id)
             if plan == False:
                 p = "Free"
-                daily = int(6)
+                daily = int(10)
                 used = await db.get_free_used(user_id)
                 remaining = daily - used
             else:
                 p = "Paid"
-                daily = int(40)
+                daily = int(60)
                 used = await db.get_pre_used(user_id)
                 remaining = daily - used
         else:
             p = "Paid"
-            daily = int(40)
+            daily = int(60)
             used = await db.get_pre_used(user_id)
             remaining = daily - used
         await message.reply_text(text=PLAN_TXT.format(message.from_user.mention, message.from_user.id, p, daily, used, daily, remaining),
