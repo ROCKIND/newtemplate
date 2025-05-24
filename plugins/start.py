@@ -30,7 +30,7 @@ SUBS_TXT = """𝖯𝗎𝗋𝖼𝗁𝖺𝗌𝖾 𝖮𝗎𝗋 𝖲𝗎𝖻𝗌𝖼
 » 𝖭𝗈 𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝖢𝗈𝗇𝗍𝖾𝗇𝗍
 
 <blockquote>𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝖴𝗌𝖾𝗋 𝖡𝖾𝗇𝖾𝖿𝗂𝗍𝗌</blockquote>
-» 𝖦𝖾𝗍 𝖣𝖺𝗂𝗅𝗒 30 𝖥𝗂𝗅𝖾𝗌 𝖣𝖺𝗂𝗅𝗒 
+» 𝖦𝖾𝗍 𝖣𝖺𝗂𝗅𝗒 40 𝖥𝗂𝗅𝖾𝗌 𝖣𝖺𝗂𝗅𝗒 
 » 𝖬𝖺𝗑𝗂𝗆𝗎𝗆 𝖵𝗂𝖽𝖾𝗈 𝖫𝖾𝗇𝗀𝗍𝗁 𝖴𝗇𝗅𝗂𝗆𝗂𝗍𝖾𝖽
 » 𝖯𝗋𝖾𝗆𝗂𝗎𝗆 𝖢𝗈𝗇𝗍𝖾𝗇𝗍    
   
@@ -38,6 +38,7 @@ SUBS_TXT = """𝖯𝗎𝗋𝖼𝗁𝖺𝗌𝖾 𝖮𝗎𝗋 𝖲𝗎𝖻𝗌𝖼
 1 𝖬𝗈𝗇𝗍𝗁 - 50𝖱𝗌 
 2 𝖬𝗈𝗇𝗍𝗁 - 90𝖱𝗌  
 3 𝖬𝗈𝗇𝗍𝗁 - 130𝖱𝗌 
+4 𝖬𝗈𝗇𝗍𝗁 - 150𝖱𝗌 
 
 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖮𝗐𝗇𝖾𝗋 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾 𝖨𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇 𝖠𝖻𝗈𝗎𝗍 𝖯𝖺𝗒𝗆𝖾𝗇𝗍."""
 
@@ -53,7 +54,7 @@ PLAN_TXT = """<blockquote>𝖯𝗅𝖺𝗇 𝖣𝖾𝗍𝖺𝗂𝗅𝗌</blockqu
 keyboard = ReplyKeyboardMarkup(
     [
         [
-            KeyboardButton("Get"),
+            KeyboardButton("Get Video"),
             KeyboardButton("Brazzers")
         ],
         [
@@ -152,7 +153,7 @@ async def start(client, message):
 async def handle_message(client, message):
     user_id = message.from_user.id
     me = await client.get_me()
-    if message.text == "Get":
+    if message.text == "Get Video":
         if not await db.has_premium_access(user_id):
             plan = await db.get_plan(user_id)
             if plan == False:
