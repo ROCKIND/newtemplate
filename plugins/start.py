@@ -228,17 +228,17 @@ async def handle_message(client, message):
             plan = await db.get_plan(user_id)
             if plan == False:
                 p = "Free"
-                daily = int(10)
+                daily = int(10) #Free User Daily File Limit 
                 used = await db.get_free_used(user_id)
                 remaining = daily - used
             else:
                 p = "Paid"
-                daily = int(50)
+                daily = int(40) #Premium User Daily File Limit 
                 used = await db.get_pre_used(user_id)
                 remaining = daily - used
         else:
             p = "Paid"
-            daily = int(50)
+            daily = int(40) #Premium User Daily File Limit 
             used = await db.get_pre_used(user_id)
             remaining = daily - used
         await message.reply_text(text=PLAN_TXT.format(message.from_user.mention, message.from_user.id, p, daily, used, daily, remaining),
