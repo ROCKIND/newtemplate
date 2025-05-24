@@ -7,7 +7,7 @@ API_ID = int(environ.get("API_ID", "23621595"))
 API_HASH = environ.get("API_HASH", "de904be2b4cd4efe2ea728ded17ca77d")
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
 
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", -1002648688388"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", -1002648688388))
 
 # Database Channel For Text Or Caption Store 
 FILE_CHANNEL = int(environ.get("FILE_CHANNEL", "-1002335899227"))
