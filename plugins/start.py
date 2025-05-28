@@ -56,7 +56,7 @@ keyboard = ReplyKeyboardMarkup(
     [
         [
             KeyboardButton("Get Video"),
-            KeyboardButton("Brazzers")
+            KeyboardButton("Videshi HD")
         ],
         [
             KeyboardButton("My Plan"),
@@ -214,9 +214,9 @@ async def handle_message(client, message):
        
             
 
-    if message.text == "Brazzers":
+    if message.text == "Videshi HD":
         buttons = [[
-            InlineKeyboardButton('Buy Subscription', url='http://t.me/BotMaster55')
+            InlineKeyboardButton('Buy Subscription', url='http://t.me/Developer_DM_Bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(text=BRA_TXT,
@@ -246,7 +246,7 @@ async def handle_message(client, message):
 
     if message.text == "Subscription":
         buttons = [[
-            InlineKeyboardButton('Owner', url='http://t.me/BotMaster55')
+            InlineKeyboardButton('Owner', url='http://t.me/Developer_DM_Bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(text=SUBS_TXT,
